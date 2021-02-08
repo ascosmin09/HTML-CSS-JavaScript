@@ -1,0 +1,54 @@
+body{
+	font-family:  Spartan, sans-serif;
+	font-size:15px;
+	line-height:1.6em;
+	background:Antiquewhite;
+}
+
+li{
+	list-style:none;
+}
+
+.container{
+	font-family: papyrus, fantasy;
+	width:70%;
+	margin:20px auto;
+	overflow:auto;
+}
+
+header{
+	font-family: papyrus, fantasy;
+	border-style: solid;
+	border-width: 1px;
+	background:#FCE3CC;
+	color:#000;
+	padding:5px 10px;
+	overflow:auto;
+	font-size:16px;
+}
+
+footer{
+	font-family: papyrus, fantasy;
+	border-style: solid;
+	border-width: 1px;
+	background:#FCE3CC;
+	color:#000;
+	padding:5px 10px;
+	overflow:auto;
+}
+
+@media only screen and (max-widht: 900px){
+	.container{
+	width:90%;
+
+	}
+}
+
+img{
+	float: left;
+	padding-right: 10px;
+}
+
+.editor{
+	float: right;
+}
