@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<html>
+<title>Font Button</title>
+</head>
+
+<style>
+
+    #fontbutton {
+      font-family: Work Sans, sans-serif;;
+  }
+
+</style>
+
+<body>
+
+<h1 id="WebsiteFont">Test</h1>
+
+<select onchange="myButton(this)" size="7" id="fontbutton">
+<option>XX-Small</option>
+<option>X-Small</option>
+<option>Small</option>
+<option>Medium</option>
+<option>Large</option>
+<option>X-Large</option>
+<option>XX-Large</option>
+</select>
+
+<script>
+function myButton(selectTag)   {
+  var listValue = selectTag.options[selectTag.selectedIndex].text;
+  document.getElementById("WebsiteFont").style.fontSize = listValue;
+}
+
+</script>
+
+</body>
+</html>

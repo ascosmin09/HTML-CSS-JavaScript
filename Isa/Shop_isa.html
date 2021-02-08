@@ -1,0 +1,267 @@
+<DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Classical Music Merchandise Shop</title>
+</head>
+
+<style>
+  .product {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    grid-area: first
+  }
+
+  .price {
+    color: black;
+    font-size: 22px;
+  }
+
+  .product button {
+    border: 10px solid #63e41;
+    outline: 10;
+    padding: 12px;
+    color: white;
+    background-color: #5B2034;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .product button:hover {
+    opacity: 0.7;
+  }
+
+  .details {
+    background-color: white;
+  }
+
+   #reset {
+    border: 100px solid #;
+    border-radius: 100px;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #5B2034;
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
+    font-size: 18px;
+  }
+
+  #reset:hover {
+    opacity: 0.7;
+  }
+
+  #placeOrder {
+   border: 2px solid #63e41;
+   border-radius: 100px;
+   outline: 0;
+   padding: 12px;
+   color: white;
+   background-color: #5B2034;
+   text-align: center;
+   cursor: pointer;
+   width: 50%;
+   font-size: 18px;
+   align: center;
+
+ }
+
+ #placeOrder:hover {
+   opacity: 0.7;
+ }
+
+  #productName {
+    font-family: Papyrus, fantasy;
+  }
+
+  #heading {
+    grid-area: header;
+    font-family: Papyrus, fantasy;
+    text-align: center;
+    font-size: 78px;
+    top: 100px;
+    right: 10px;
+  }
+
+  #body {
+    background-color: FCE3CC;
+  }
+
+  #logo {
+    position: absolute;
+    left: 20px;
+    width: 70px;
+  }
+
+  #finalbuttons {
+    grid-area: footer;
+    text-align: center;
+    background-color: antiquewhite;
+  }
+
+  #details {
+    font-family: 'Spartan', sans-serif;
+    text-align: center;
+  }
+
+  #PDetails {
+    font-family: Papyrus, fantasy;
+    text-align: center;
+    font-size: 40px;
+    bottom: 100px;
+  }
+
+  #box2 {
+    border: 2px solid #63e41;
+    border-radius: 100px;
+    background-color: antiquewhite;
+  }
+
+
+
+
+
+</style>
+
+<body id="body">
+  <a href="file:///Users/isaqamber/Desktop/Webdev%20work/Main%20Page%20for%20coursework.html"><img src="images_isa/logo.png" alt="logo" id="logo"></a>
+  <h1 id="heading">Classical Music Shop</h1>
+
+  <fieldset>
+
+
+<!SHIRT>
+  <div class="product">
+    <img src="images_isa/bachshirt.jpeg" alt="Shirt" style="width:100%" id="bachshirt">
+    <div id="printProduct">
+    <h1 id="productName">Bach Shirt</h1>
+    </div>
+    <p class="price">£10.99</p>
+    <p><input type="number" name="shirtQty" id="shirtQty" min="0">
+      <br></p>
+      <p>
+    <button type="placeholder" name="shirtQty">Add to Cart</button>
+    </p>
+  </div> <br>
+
+
+<!HOODIE>
+<div class="product">
+  <img src="images_isa/mozarthoodie2.jpeg" alt="Hoodie" style="width:100%">
+  <h1 id="productName">Mozart Hoodie</h1>
+  <p class="price">£29.99</p>
+  <p><input type="number" name="hoodieQty" id="hoodieQty" min="0">
+    <br></p>
+  <p>
+  <button type="submit" name="hoodieQty">Add to Cart</button>
+  </p>
+  </div> <br>
+
+<!MUG>
+<br>
+<div class="product">
+  <img src="images_isa/beethovenmug.jpeg" alt="Mug" style="width:100%">
+  <h1 id="productName">Beethoven Mug</h1>
+  <p class="price">£5.99</p>
+  <p><input type="number" name="mugQty" id="mugQty" min="0">
+    <br></p>
+  <p>
+  <button type="submit" name="hoodieQty">Add to Cart</button>
+  </p>
+  </div>
+<br>
+
+
+
+
+
+<h1 id="PDetails">Personal Details</h1>
+<form id="details">
+<fieldset id="box2">
+<label for="firstName">First Name:</label>
+<input type="text" name="name" id="firstname" placeholder="Enter your first name" required> <br>
+<br>
+<label for="surName">Surname: </label>
+<input type="text" name="name" id="surname" placeholder="Enter your surname" required> <br>
+<br>
+<label for="email">Email: </label>
+<input type="email" name="email" id="email" placeholder="Enter your email" required> <br>
+</fieldset> <br>
+
+
+
+<form id="finalbuttons">
+<div id="button">
+  <button type="reset" id="Reset">Reset</button><br>
+  <br>
+  <button type="button" id="placeOrder" onclick="Submit()">Place Order</button>
+</div>
+</form>
+
+<a href="PageEditorShop.html">Page Editor (Shop)</a>
+</body>
+
+<a href="PageEditorPresentation.html">Page Editor (Pres. Page)</a>
+
+
+<script>
+  function Submit() {
+
+    var firstName = document.getElementById('firstname').value;
+    var lastName = document.getElementById('surname').value;
+    var email = document.getElementById('email').value;
+
+    if (firstName == "") {
+      alert("Please enter your first name")
+    }
+
+    else if (lastName == "") {
+      alert("Please enter your surname")
+    }
+
+    else if (email == "") {
+      alert("Please enter your email")
+    }
+
+    else {
+      var shirtValue = document.getElementById('shirtQty').value;
+      var shirtCost = shirtValue * 10.99;
+
+      var hoodieValue = document.getElementById('hoodieQty').value;
+      var hoodieCost = hoodieValue * 29.99;
+
+      var mugValue = document.getElementById('mugQty').value;
+      var mugCost = mugValue * 5.99
+
+      var totalpend = shirtCost + hoodieCost + mugCost;
+      var total = totalpend.toFixed(2);
+
+
+
+  var ok = confirm("Your shirt cost is £" + shirtCost + ". Your hoodie cost is £" + hoodieCost + ". Your mug cost is £" + mugCost + ". Press OK to see total and confirm.");
+
+    if (ok == true) {
+      var orderdone = confirm("Your total is £" + total + ". Press OK to place your order.")
+  }
+
+  if (orderdone == true) {
+    alert(firstName + " " + lastName + ", You will receive a confirmation email shortly. " + "(" + email + ")");
+    alert("REDIRECTING TO MAIN PAGE...")
+    location.replace("Main Page for coursework.html")
+  }
+  }
+}
+
+</script>
+
+
+
+</html>

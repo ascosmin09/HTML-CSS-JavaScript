@@ -1,0 +1,187 @@
+<DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Wolfgang Amadeus Mozart Profile</title>
+  </head>
+
+<style>
+
+  .top {
+    position: relative;
+  }
+
+  #heading1 {
+    grid-area: header;
+    font-family: Papyrus, fantasy;
+    text-align: center;
+    font-size: 80px;
+    text-align: right;
+    margin-top: 40px;
+    right: 10px;
+  }
+
+  #heading2 {
+    grid-area: header;
+    font-family: Papyrus, fantasy;
+    text-align: center;
+    font-size:40px;
+  }
+
+  #heading3 {
+    grid-area: header;
+    font-family: Papyrus, fantasy;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  #body {
+    background-color:DED9C5;
+  }
+
+  #mozartimg {
+    width: 50%;
+    height: 54.7%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 10px solid #63e41;
+    outline: 10;
+    padding: 12px;
+    border-radius: 100px;
+
+  }
+
+  #bodyText1 {
+    font-family: 'Spartan', sans-serif;
+    line-height:32px;
+    font-size:20px;
+    color:#fff;
+    background: #966A86;
+    margin:10px;
+    padding: 15px 20px 15px 20px;
+    border-radius: 5px;
+    text-align: center;
+    grid-area: first;
+
+  }
+
+  #bodyText2 {
+    font-family: 'Spartan', sans-serif;
+    line-height:32px;
+    font-size:20px;
+    color:#fff;
+    background: #966A89;
+    margin:10px;
+    padding: 15px 20px 15px 20px;
+    border-radius: 5px;
+    text-align: center;
+    grid-area: second;
+  }
+
+
+    #logo {
+      position: absolute;
+      left: 20px;
+      top: 10px;
+      width: 70px;
+    }
+
+    #serenadeimg {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      height: 70%;
+      border-radius: 20px;
+    }
+
+    #bodyText3 {
+      font-family: 'Spartan', sans-serif;
+      line-height:32px;
+      font-size:20px;
+      color:#fff;
+      background: #966A89;
+      margin:10px;
+      padding: 15px 20px 15px 20px;
+      border-radius: 5px;
+      text-align: center;
+      grid-area: third;
+
+    }
+
+    a:link {color:green}
+
+    a:visited {color:black}
+
+    a:hover {color:navy}
+
+    a:active {color:red}
+
+    #fontbutton {
+      font-family: Work Sans, sans-serif;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+
+  }
+
+
+
+</style>
+
+
+
+
+
+
+<body id="body">
+
+  <select onchange="myButton(this)" size="7" id="fontbutton">
+  <option>XX-Small</option>
+  <option>X-Small</option>
+  <option>Small</option>
+  <option>Medium</option>
+  <option>Large</option>
+  <option>X-Large</option>
+  <option>XX-Large</option>
+  </select>
+
+  <a href="file:///Users/isaqamber/Desktop/Webdev%20work/Main%20Page%20for%20coursework.html" id="a"><img src="images_isa/logo.png" alt="logo" id="logo"></a>
+
+<h1 id="heading1">Wolfgang Amadeus Mozart</h1>
+<div class="top">
+<img src="images_isa/mozart.jpeg" alt="Mozart" id="mozartimg">
+<p id="bodyText1">
+Born on the 27th of January 1756 in Salzburg, Wolfgang Amadeus Mozart
+was a prolific and influential composer of the classical period.
+Mozart was a child prodigy. His father—a talented violinist—taught him basic notes on the harpsichord. Mozart composed his first piece of music in 1761, at age five; by age six, he had performed before two imperial courts. In 1763 Mozart and his sister, Maria Anna (”Nannerl”), went on tour. For three years the siblings toured western Europe, performing in major cities such as Munich, Augsburg, Paris, and London. In Paris Mozart published his first piece of music, and in London he composed his first symphony. After the tour concluded in 1766, Mozart went to Vienna, where he composed a German singspiel (Bastien und Bastienne) and an Italian opera buffa (La finta semplice). In 1769, 13-year-old Mozart was appointed honorary Konzertmeister at the Salzburg court.
+</p>
+</div>
+
+<a href="https://open.spotify.com/track/5wnr55dv06SpYza2MUdyY4">
+<h2 id="heading2">Featured Composition: Eine kleine Nachtmusik (Serenade No. 13)</h2></a>
+<img src="images_isa/serenade13.jpeg" alt="SerenadeNo13" id="serenadeimg"> <br>
+<p id="bodyText2">
+The serenade was completed in Vienna on 10 August 1787, around the time Mozart was working on the second act of his opera Don Giovanni. It is not known why it was composed. Wolfgang Hildesheimer, noting that most of Mozart's serenades were written on commission, suggests that this serenade, too, was a commission, whose origin and first performance were not recorded.
+</p>
+<h3 id="heading3">Our thoughts: </h3>
+<p id="bodyText3">
+This composition is an absolute classic. Arguably the most recognizable composition out of it's era due to it's appearances in multiple Hollywood movies, as well as many YouTube videos
+It is very easy to listen to, it feels as though it is capable of relaxing your soul. It is well known amongst students as a 'study song'. Overall, this piece is a classic that will live on for as long as music as we know it is around.
+</p>
+
+<a href="PageEditorProfile.html">Page Editor (Mozart Profile)</a>
+  </body>
+
+<script>
+  function myButton(selectTag)   {
+    var listValue = selectTag.options[selectTag.selectedIndex].text;
+    document.getElementById("bodyText1").style.fontSize = listValue;
+    document.getElementById("bodyText2").style.fontSize = listValue;
+    document.getElementById("bodyText3").style.fontSize = listValue;
+  }
+</script>
+
+
+</html>
