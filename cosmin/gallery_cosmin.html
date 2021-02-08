@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Gallery</title>
+<link rel="stylesheet" href="CSS_cosmin/layout.css" type="text/css"><!--linking the css-->
+	<link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet"> <!--linking the font-->
+</head>
+
+<body id="myBody">
+	<form>
+	<div class="container"> <!--container for grid view*-->
+		<div class="box1"> <!--first box for grid view*-->
+			<a href="../jonathan/Main Page for coursework.html"><img src="images_cosmin/Logo.png" alt="logo" id="logo"></a> <!--linking the logo to the main page of the website-->
+			<h1> Classical Music Concerts</h1>
+		</div>
+		<div class="box2" id="image1"> <!--second box and so on-->
+			<img src="images_cosmin/1_tn.jpg" alt="firstimage" id="first" style="border-radius: 50%">	
+		</div>
+		<div class="box3" id="image2">
+			<img src="images_cosmin/2_tn.jpg" alt="secondimage" id="second" style="border-radius: 50%">	
+		</div>
+		<div class="box4" id="image3">
+			<img src="images_cosmin/3_tn.jpg" alt="thridimage" id="third" style="border-radius: 50%">	
+		</div>
+		<div class="box5" id="image4">
+			<img src="images_cosmin/4_tn.jpg" alt="fourthimage" id="fourth" style="border-radius: 50%">	
+		</div>
+		<div class="box6" id="image5">
+			<img src="images_cosmin/5_tn.jpg" alt="fifthimage" id="fifth" style="border-radius: 50%">	
+		</div>
+		<div class="box7" id="selectedImage"> <!--the designed area for the full sized picture to appear-->
+			<img src="" id="bigPicture" style="border-radius: 10%"> <!--the proprieties for the picture-->
+			<span id="description"></span>
+		</div>
+		
+	  	<div class="box8">
+			<label for="bColor">Background color:</label> <!--pull down menu for background color-->
+			<select name="backgroundColor" id="backgroundColor">
+					<option value="pleaseSelect">Please select</option>
+					<option value="yellow">Yellow</option>
+					<option value="orange">Orange</option>
+					<option value="red">Red</option>
+			</select>
+			<br>
+			<label for="tColor">Text color:</label> <!--pull down menu for text color-->
+		  	<select name="textColor" id="textColor">
+					<option value="pleaseSelect">Please select</option>
+					<option value="blue">Blue</option>
+					<option value="black">Black</option>
+					<option value="white">White</option>
+			</select>
+		</div>
+		<div class="box9"> 
+			<input type="reset" value="Reset the colors" name="reset" id="reset"> <!--reset button-->
+		</div>
+		<div class="box10"> <!--link to the page editor-->
+			<p>Made by <a href="pageEditorGallery.html">Cosmin-Alexandru Stefanescu</a></p>
+		</div>
+	</div>
+	</form>
+	<script>
+		function getSelectedValue( selectList ) {
+		  return selectList[ selectList.selectedIndex ].value;
+		} /*get selected value function, to give functionality to the pull down menus*/
+		
+		document.getElementById("image1").addEventListener("mouseover",function(){
+			document.getElementById("bigPicture").src="images_cosmin/1.jpg";
+			document.getElementById("description").innerHTML="Opera show help at magnificent Vancity Theatre in Vancouver,BC.";
+		}); /*placing the bigger image in the designed area when the mouse is hovering on it  s thumbanil*/
+		document.getElementById("image2").addEventListener("mouseover",function(){
+			document.getElementById("bigPicture").src="images_cosmin/2.jpg";
+			document.getElementById("description").innerHTML="Louis Langrée conducting the Mostly Mozart Festival Orchestra, which returns to Lincoln Center, New York in July.";
+		});/*placing the bigger image in the designed area when the mouse is hovering on it  s thumbanil*/
+		document.getElementById("image3").addEventListener("mouseover",function(){
+			document.getElementById("bigPicture").src="images_cosmin/3.jpg";
+			document.getElementById("description").innerHTML="Multi-Story Orchestra at Bold Tendencies, Peckham multi-storey car park.";
+		});/*placing the bigger image in the designed area when the mouse is hovering on it  s thumbanil*/
+		document.getElementById("image4").addEventListener("mouseover",function(){
+			document.getElementById("bigPicture").src="images_cosmin/4.jpg";
+			document.getElementById("description").innerHTML="Dvořák celebrated his new employment at the Prague Conservatory by writing his Eighth Symphony, an orchestral work filled with birdsong, country life and folk song.";
+		});/*placing the bigger image in the designed area when the mouse is hovering on it  s thumbanil*/
+		document.getElementById("image5").addEventListener("mouseover",function(){
+			document.getElementById("bigPicture").src="images_cosmin/5.jpg";
+			document.getElementById("description").innerHTML="Smetana Hall housed in the Municipal House, this concert hall occupies the central section of the building and is home to the Prague Symphony Orchestra.";
+		});/*placing the bigger image in the designed area when the mouse is hovering on it  s thumbanil*/
+		
+		document.getElementById("backgroundColor").addEventListener("change", function(){
+			document.getElementById("myBody").style.backgroundColor=getSelectedValue(this);	
+		});/*chaning the background color when the user selects a different one*/
+		
+		document.getElementById("textColor").addEventListener("change", function(){
+			document.getElementById("myBody").style.color=getSelectedValue(this);	
+		});/*chaning the text color when the user selects a different one*/
+		
+		function resetColors(){
+			document.getElementById("myBody").style.backgroundColor="#DED9D5";
+			document.getElementById("myBody").style.color="black";
+		} /*function to reset the colors to their default*/
+		document.getElementById("reset").addEventListener("click", resetColors);/*calling the function when the user clicks on it*/
+	
+		
+	</script>
+</body>
+</html>
