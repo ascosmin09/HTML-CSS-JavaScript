@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+.box1{
+	grid-area: header;
+	font-family: Papyrus, fantasy;
+	font-size:40px;
+} /*defining the position of each box in the grid area*/
+.box2{
+	grid-area: first;
+}
+.box3{
+	grid-area: second;
+}
+.box4{
+	grid-area: third;
+}
+.box5{
+	grid-area: forth;
+}
+.box6{
+	grid-area: fifth;
+}
+.box7{
+	grid-area:  pictureSelected;
+	text-align: center;
+}
+.box8{
+	grid-area: chooseColor;
+}
+.box9{
+	grid-area: buttons;
+}
+.box10{
+	grid-area: madeBy;
+	justify-self: center;
+}
+.container{
+	max-height: 1000px;
+	display: grid;
+	grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+	grid-template-rows: 100px 100px 100px 100px 100px 50px 40px 20px;
+	grid-template-areas: 
+		"header header header header header header header header header header "
+		". . . . . . . . . ."
+		". first . second . pictureSelected pictureSelected pictureSelected pictureSelected pictureSelected"
+		". . third . . pictureSelected pictureSelected pictureSelected pictureSelected pictureSelected"
+		". forth . fifth . pictureSelected pictureSelected pictureSelected pictureSelected pictureSelected"
+		". . . . . . . . . ."
+		"chooseColor chooseColor chooseColor chooseColor . buttons buttons buttons buttons buttons"
+		"madeBy madeBy madeBy madeBy madeBy madeBy madeBy madeBy madeBy madeBy";
+	grid-column-gap: 10px;
+    grid-row-gap: 15px;
+	justify-items: stretch;
+	justify-content: center;
+	align-items: stretch;
+	font-family: 'Spartan', sans-serif;
+} /*defining my grid area*/
+body{
+	background-color: #DED9D5;
+}
+#logo{
+	float:left;
+}
+#reset{
+	font-family: 'Spartan', sans-serif;
+}
+#backgroundColor{
+	font-family: 'Spartan', sans-serif;
+}
+#textColor{
+	font-family: 'Spartan', sans-serif;
+}
